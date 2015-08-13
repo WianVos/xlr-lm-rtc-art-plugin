@@ -1,0 +1,24 @@
+buildscript {
+  repositories {
+    jcenter()
+  }
+  dependencies {
+    classpath "nl.javadude.gradle.plugins:license-gradle-plugin:0.11.0"
+  }
+}
+
+version='1.0.0'
+
+apply plugin: 'java'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile 'commons-collections:commons-collections:3.2.1'
+    compile 'com.xebialabs.overthere:overtherepy:0.0.3'
+}
+
+
