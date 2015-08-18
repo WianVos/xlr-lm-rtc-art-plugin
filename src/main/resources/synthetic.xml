@@ -48,7 +48,7 @@
         <property name="host" label="host" kind="string" />
         <property name="username" label="Username" kind="string" />
         <property name="password" label="Password" kind="string" password="true" required="false" />
-        <property name="key_file" label="private keyfile" kind="string" required="false"/>
+        <property name="key_file" label="private keyfile" kind="string" required="false" default="none"/>
         <property name="workingDirectory" label="Filesystem Workspace" kind="string" />
         <property name="pathToZipExecutable" label="path to the Zip binary" kind="string" default="/usr/bin/zip" hidden="true"/>
     </type>

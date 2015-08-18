@@ -6,6 +6,10 @@ This plugin allows for the integration of both Artifactory and Rational Team Con
 This plugin is capable of building an xldeploy dar file (deployment archive file) from components pulled from several sources and uploading that dar file to a specified xl-deploy instances.
 It does this by combining several steps in a xl-release phase while making use of an external "build" server.
 
+## TODO
+- fix username password keyfile issue
+- make the create darpackage emmit it's settings so that the rest of the jobs wil automaticly pick up the correct settings
+- document and clean code
 
 ## Use case
 Liberty Mutual (the client) has the need to build a dar file out of ear files which are stored in artifactory and so called config (xl-deploy ci's which do not contain any actual tangeble artifacts)

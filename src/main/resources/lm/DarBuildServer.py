@@ -14,10 +14,7 @@ from overtherepy import SshConnectionOptions, OverthereHost, OverthereHostSessio
 class DarBuildServer(object):
     def __init__(self, server):
 
-        if 'key_file' in server:
-          self.sshOpts = SshConnectionOptions(server['host'], username=server['username'],privateKeyFile=server['key_file'])
-        else:
-          self.sshOpts = SshConnectionOptions(server['host'], username=server['username'],password=server['password'])
+        self.sshOpts = SshConnectionOptions(server['host'], username=server['username'],privateKeyFile=server['key_file'],password=server['password'] )
 
         self.host = OverthereHost(self.sshOpts)
         self.session = OverthereHostSession(self.host)

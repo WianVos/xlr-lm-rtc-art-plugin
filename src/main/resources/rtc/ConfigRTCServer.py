@@ -10,10 +10,12 @@ from overtherepy import SshConnectionOptions, OverthereHost, OverthereHostSessio
 class ConfigRTCServer(object):
     def __init__(self, server, dirname="tmp", work_directory=None):
 
-        if 'key_file' in server:
-          self.sshOpts = SshConnectionOptions(server['host'], username=server['username'],privateKeyFile=server['key_file'])
-        else:
-          self.sshOpts = SshConnectionOptions(server['host'], username=server['username'],password=server['password'])
+        # if 'key_file' in server:
+        #   self.sshOpts = SshConnectionOptions(server['host'], username=server['username'],privateKeyFile=server['key_file'])
+        # else:
+        #   self.sshOpts = SshConnectionOptions(server['host'], username=server['username'],password=server['password'])
+
+        self.sshOpts = SshConnectionOptions(server['host'], username=server['username'],privateKeyFile=server['key_file'],password=server['password'] )
 
         self.host = OverthereHost(self.sshOpts)
         self.session = OverthereHostSession(self.host)
